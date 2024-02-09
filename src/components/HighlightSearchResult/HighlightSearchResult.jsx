@@ -5,7 +5,7 @@ const HighlightSearchResult = ({ text, searchTerm }) => {
     return part.match(regex) ? <b key={index}>{part}</b> : part;
   });
 
-  return <>{highlightedText}</>;
+  return <span>{highlightedText}</span>;
 };
 
 export default HighlightSearchResult;
