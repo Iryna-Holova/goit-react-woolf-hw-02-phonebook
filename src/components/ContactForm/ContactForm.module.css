@@ -59,7 +59,8 @@
   transform: translateY(50%);
   color: #8f96a5;
   padding: 0 4px;
-  transition: color 250ms linear, transform 250ms linear, font-size 250ms linear;
+  transition: color 2500ms linear, transform 2500ms linear,
+    font-size 2500ms linear;
 }
 
 .add_button {
