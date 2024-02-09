@@ -31,4 +31,11 @@
   top: 50%;
   transform: translateY(-50%);
   padding: 8px;
+  color: #8f96a5;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.delete_button:hover,
+.delete_button:focus {
+  color: #1d4eb9;
 }
