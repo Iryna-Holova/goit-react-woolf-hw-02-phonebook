@@ -1,6 +1,3 @@
 .list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1px;
-  margin-bottom: 32px;
+  padding-bottom: 32px;
 }
