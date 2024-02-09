@@ -53,6 +53,7 @@
 }
 
 .label {
+  cursor: text;
   position: absolute;
   left: 32px;
   top: 10px;
