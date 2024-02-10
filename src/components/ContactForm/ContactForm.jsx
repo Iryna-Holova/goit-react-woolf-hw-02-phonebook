@@ -9,22 +9,23 @@ const INITIAL_STATE = {
 };
 
 class ContactForm extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { ...INITIAL_STATE };
-    this.nameInput = React.createRef();
-  }
-
+  state = { ...INITIAL_STATE };
   handleChange = ({ target: { name, value } }) => {
     this.setState({ [name]: value });
   };
 
+  nameInput = React.createRef();
+
   handleSubmit = evt => {
     evt.preventDefault();
 
-    this.props.onSubmit({ ...this.state })
-      ? this.nameInput.current.focus()
-      : this.reset();
+    try {
+      this.props.onSubmit({ ...this.state });
+      this.reset();
+    } catch (error) {
+      alert(error.message);
+      this.nameInput.current.focus();
+    }
   };
 
   reset = () => {

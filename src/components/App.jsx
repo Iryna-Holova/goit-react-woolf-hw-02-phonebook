@@ -18,15 +18,12 @@ class App extends Component {
     );
 
     if (isExist) {
-      alert(`${data.name} is already in contacts.`);
-    } else {
-      data.id = nanoid();
-      this.setState(prevState => ({
-        contacts: [data, ...prevState.contacts],
-      }));
+      throw new Error(`${data.name} is already in contacts.`);
     }
 
-    return isExist;
+    this.setState(prevState => ({
+      contacts: [{ ...data, id: nanoid() }, ...prevState.contacts],
+    }));
   };
 
   handleRemoveContact = contactId => {

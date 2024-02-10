@@ -10,7 +10,7 @@ application should not save contacts between different sessions (page refresh).
 
 Use this input markup with built-in validation for the contact name.
 
-```js
+```jsx
 <input
   type="text"
   name="name"
@@ -49,7 +49,7 @@ state = {
 
 Use this markup of an instance with built-in validation for the contact number.
 
-```js
+```jsx
 <input
   type="tel"
   name="number"
@@ -95,7 +95,7 @@ Four components are enough: `add contact form`, `contact list`,
 After the refactoring, the root component of the application will look like
 this.
 
-```js
+```jsx
 <div>
   <h1>Phonebook</h1>
   <ContactForm ... />
